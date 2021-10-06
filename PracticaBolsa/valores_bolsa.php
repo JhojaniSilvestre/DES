@@ -12,11 +12,11 @@ for ($i=0; $i < 35; $i++) { //Relleno el array 35 x 9
 }
 
 foreach ($empresa as $nombreEmp => $valor) { //imprimo el array
-    print "$nombreEmp | ";
+    echo "$nombreEmp | ";
     foreach ($valor as $key => $value) {
-        print "$key: $value | ";
+        echo "$key: $value | ";
     }
-    print "<br />";
+    echo "<br />";
 }
 
 ?>
