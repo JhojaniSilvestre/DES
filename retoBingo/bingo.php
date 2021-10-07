@@ -17,7 +17,7 @@ $j=0;
 while ($aciertos < 15) {
     $bombo=rand(1,60);
     if(!in_array($bombo, $bomboAux)){ //si el numero aleatorio del bombo no se encuentra en bomboAux:
-        $bomboAux[$j] = $bombo;//guardo el numero en el array bomboAux
+        $bomboAux[$j] = $bombo;//guardo el numero en bomboAux
         if (in_array($bombo, $carton)) { //si el num aleatorio del bombo se encuentra en el carton:
             $aciertos++; //incremento los aciertos
             echo "<br/>$bombo";
