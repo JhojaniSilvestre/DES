@@ -1,31 +1,44 @@
+
 <?php
+
+//relleno el array jugadores 
+$cont=1;
 $carton = array();
-$i=0;
-do{
-    $numRand=rand(1,60);
-    if (!in_array($numRand, $carton)) { //si el num random no se encuentra en el carton:
-        $carton[$i] = $numRand; //guardo el numero en el carton
-        $i++; //incremento la posicion
+for ($i=0; $i < 12; $i++) {
+    $j=0;
+    $k=1;
+    if ($i % 3 == 0) {
+        $jugadores[$i][$j] = "jugador".$cont++;
     }
-}while(count($carton) < 15);
+    do{
+        $numRand=rand(1,60);
+        if (!in_array($numRand, $carton)) {
+            $carton[$j] = $numRand;
+            $jugadores[$i][$k++] =  $numRand;
+            $j++;
+        }
+    }while(count($carton) < 15);
+    $carton = array();
+}
+var_dump($jugadores);
 
-print_r($carton);
-
+/*
 $aciertos=0;
-$bomboAux= array(); //guardará los numeros aleatorios del bombo sin repetir
+$bomboAux= array();
 $j=0;
 while ($aciertos < 15) {
     $bombo=rand(1,60);
-    if(!in_array($bombo, $bomboAux)){ //si el numero aleatorio del bombo no se encuentra en bomboAux:
-        $bomboAux[$j] = $bombo;//guardo el numero en bomboAux
-        if (in_array($bombo, $carton)) { //si el num aleatorio del bombo se encuentra en el carton:
-            $aciertos++; //incremento los aciertos
+    if(!in_array($bombo, $bomboAux)){
+        $bomboAux[$j] = $bombo;
+        if (in_array($bombo, $carton)) {
+            $aciertos++;
             echo "<br/>$bombo";
         }
-        $j++;//incremento la posicion
+        $j++;
     }
 }
 echo "<br/> ";
 print_r($bomboAux);
+*/
 
 ?>
