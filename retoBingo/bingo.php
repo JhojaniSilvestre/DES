@@ -47,7 +47,7 @@ while ($aciertos < 15) {
                 if($jugadores[$i][$j] == $bomboAux[$b]){
                     $aciertos++;
                     $jugadorWin = $jugadores[$i][0];
-                    echo "<br/> bola: $bombo  "; //
+                    echo "<br/> bola: $bombo  ";
                     echo " ".$jugadorWin;
                 }
             }
