@@ -2,7 +2,7 @@
 <?php
 
 //relleno el array jugadores 
-$cont=1;
+$cont=0;
 $carton = array();
 for ($i=0; $i < 12; $i++) {
     $j=0;
@@ -10,6 +10,8 @@ for ($i=0; $i < 12; $i++) {
     if ($i % 3 == 0) {
         $jugadores[$i][$j] = "jugador".$cont++;
     }
+    $jugadores[$i][$j] = "jugador".$cont;
+    
     do{
         $numRand=rand(1,60);
         if (!in_array($numRand, $carton)) {
