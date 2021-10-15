@@ -4,10 +4,10 @@
 //relleno el array jugadores 
 $cont=0;
 $carton = array();
-for ($i=0; $i < 12; $i++) {
+for ($i=0; $i < 12; $i++) {//total de cartones por cada jugador, en este caso 4 jugadores cada uno con 3 cartones
     $j=0;
     $k=1;
-    if ($i % 3 == 0) {
+    if ($i % 3 == 0) {//esto controla cuantos cartones tiene un jugador
         $jugadores[$i][$j] = "jugador".$cont++;
     }
     $jugadores[$i][$j] = "jugador".$cont;
