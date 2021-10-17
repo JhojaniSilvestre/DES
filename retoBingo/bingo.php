@@ -4,7 +4,7 @@
 $cont=0;
 $carton = array();
 for ($i=0; $i < 12; $i++) { //total de cartones por cada jugador, 4 jugadores cada uno con 3 cartones
-    $j=0; //indice del carton Auxiliar, para controlar que no se repitan numeros
+    $j=0; //indice del carton Auxiliar
     $k=2; //indice donde empezarán los cartones de cada jugador
     if ($i % 3 == 0) { //controla cuantos cartones tiene un jugador
         $jugadores[$i][0] = "jugador".$cont++; //En la columna 0, el nombre del jugador
@@ -14,7 +14,7 @@ for ($i=0; $i < 12; $i++) { //total de cartones por cada jugador, 4 jugadores ca
     do{
         $numRand=rand(1,60);
         if (!in_array($numRand, $carton)) {
-            $carton[$j] = $numRand; //si el numero no está relleno el cartón
+            $carton[$j] = $numRand; //si el numero no está, relleno el cartón para controlar que no se repitan numeros
             $jugadores[$i][$k++] =  $numRand; //relleno la columna
             $j++;
         }
