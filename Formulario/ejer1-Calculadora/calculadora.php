@@ -5,7 +5,7 @@ $operando1 = $_POST["operando1"];
 $operando2 = $_POST["operando2"];
 $operacion = $_POST["operacion"];
 
-var_dump($_POST);
+//var_dump($_POST);
 
 if ($operacion == "suma") {
     $resultado = Suma($operando1, $operando2);
