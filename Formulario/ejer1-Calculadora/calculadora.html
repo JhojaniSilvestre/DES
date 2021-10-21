@@ -1,0 +1,34 @@
+<!DOCTYPE suma>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <h1>CALCULADORA</h1>
+    <form action="calculadora.php" method="post">
+        <label for="operando1">Operando1:</label>
+        <input type="number" id="operando1" name="operando1"><br><br>
+        <label for="operando2">Operando2:</label>
+        <input type="number" id="operando2" name="operando2"><br><br>
+        
+        <span>Selecciona operación: </span><br>
+        <input type="radio" id="suma" name="suma">
+        <label for="suma">Suma</label><br>
+        <input type="radio" id="resta" name="resta">
+        <label for="resta">Resta</label><br>
+        <input type="radio" id="producto" name="producto">
+        <label for="producto">Producto</label><br>
+        <input type="radio" id="division" name="division">
+        <label for="division">División</label><br><br>
+
+        <input type="submit" value="enviar">
+        <input type="reset" value="borrar">
+    </form>
+</body>
+
+</html>
