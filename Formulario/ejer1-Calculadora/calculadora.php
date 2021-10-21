@@ -3,7 +3,7 @@ require 'fOperaciones.php';
 
 $operando1 = $_POST["operando1"];
 $operando2 = $_POST["operando2"];
-$suma = $_POST["operando2"];
+$suma = $_POST["suma"];
 $resta = $_POST["resta"];
 $producto = $_POST["producto"];
 $division = $_POST["division"];
